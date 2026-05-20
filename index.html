@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scaleX - Idea Pitching Event by NEXGEN</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0fdfa',
+                            100: '#ccfbf1',
+                            500: '#14b8a6',
+                            600: '#0d9488',
+                            900: '#134e4a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .gradient-text {
+            background: linear-gradient(to right, #2dd4bf, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-950 text-gray-100 font-sans antialiased flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-effect border-b border-gray-800 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- College Logo -->
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <img class="h-14 w-14 object-cover rounded-full bg-white p-1 text-[10px] text-center text-gray-800"
+                        src="https://lh3.googleusercontent.com/d/1sTXB1JQaDOewoXc_rMsl2hiCcTLiQ-ON" alt="KSIT"
+                        onerror="this.onerror=null; this.src='https://placehold.co/100x100/ffffff/111827?text=KSIT';">
+                    <div class="hidden sm:block text-xs font-semibold leading-tight tracking-wider text-gray-300">
+                        K.S. INSTITUTE<br>OF TECHNOLOGY
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#home" class="text-gray-300 hover:text-brand-500 transition-colors font-medium">Home</a>
+                    <a href="#about" class="text-gray-300 hover:text-brand-500 transition-colors font-medium">About</a>
+                    <a href="#speaker" class="text-gray-300 hover:text-brand-500 transition-colors font-medium">Guest
+                        Speaker</a>
+                    <a href="#rules" class="text-gray-300 hover:text-brand-500 transition-colors font-medium">Rules</a>
+                    <!-- Modal Trigger Button -->
+                    <button
+                        class="open-rules-modal inline-block bg-brand-600 hover:bg-brand-500 text-white px-6 py-2 rounded-full font-semibold transition-all shadow-lg hover:shadow-brand-500/30 transform hover:-translate-y-0.5">
+                        Register Now
+                    </button>
+                </div>
+
+                <!-- Club Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <img class="h-14 w-14 object-contain text-[10px] text-center text-gray-400"
+                        src="https://lh3.googleusercontent.com/d/1Tqx_PCTHaRf2rb-tlrgacOTMTa_r_wmp" alt="NEXGEN"
+                        onerror="this.onerror=null; this.src='https://placehold.co/100x100/111827/ffffff?text=NEXGEN';">
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden min-h-screen flex items-center">
+        <!-- Background Elements -->
+        <div class="absolute inset-0 z-0">
+            <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-brand-600/20 blur-[120px]">
+            </div>
+            <div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-blue-600/20 blur-[120px]">
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <div
+                class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-effect text-brand-400 text-sm font-semibold mb-6 uppercase tracking-widest border border-brand-500/30">
+                <i data-lucide="zap" class="w-4 h-4"></i>
+                ICC Club NEXGEN Presents
+            </div>
+
+            <h1 class="text-6xl md:text-8xl font-extrabold tracking-tight mb-6">
+                <span class="gradient-text">scaleX</span>
+            </h1>
+
+            <p class="mt-4 max-w-2xl text-xl md:text-2xl text-gray-300 mx-auto mb-10 font-light">
+                Pitch your vision. Gain exposure. Get recognized.<br>
+                The ultimate idea pitching platform at KSIT.
+            </p>
+
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-6 mb-12">
+                <div
+                    class="flex items-center gap-2 text-gray-300 bg-gray-900/50 px-6 py-3 rounded-xl border border-gray-800">
+                    <i data-lucide="calendar" class="w-5 h-5 text-brand-500"></i>
+                    <span class="font-medium">25th May 2026</span>
+                </div>
+                <div
+                    class="flex items-center gap-2 text-gray-300 bg-gray-900/50 px-6 py-3 rounded-xl border border-gray-800">
+                    <i data-lucide="clock" class="w-5 h-5 text-brand-500"></i>
+                    <span class="font-medium">8:30 AM IST</span>
+                </div>
+                <div
+                    class="flex items-center gap-2 text-gray-300 bg-gray-900/50 px-6 py-3 rounded-xl border border-gray-800">
+                    <i data-lucide="map-pin" class="w-5 h-5 text-brand-500"></i>
+                    <span class="font-medium">KSIT Campus</span>
+                </div>
+            </div>
+
+            <!-- Modal Trigger Button -->
+            <button
+                class="open-rules-modal w-fit text-lg bg-white text-gray-900 hover:bg-gray-100 px-8 py-4 rounded-full font-bold transition-all shadow-xl hover:shadow-white/20 transform hover:-translate-y-1 flex items-center gap-2 mx-auto">
+                Secure Your Spot <i data-lucide="arrow-right" class="w-5 h-5"></i>
+            </button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-gray-900 border-y border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">What is <span class="text-brand-500">scaleX</span>?
+                    </h2>
+                    <p class="text-gray-400 text-lg mb-6 leading-relaxed">
+                        scaleX is a premier idea pitching event organized by the prestigious ICC club
+                        <strong>NEXGEN</strong> at the <strong>K.S. Institute of Technology</strong>. It is designed to
+                        be the launching pad for the next generation of innovators and entrepreneurs.
+                    </p>
+                    <p class="text-gray-400 text-lg mb-8 leading-relaxed">
+                        Whether you have a groundbreaking tech startup idea, a social initiative, or a unique product
+                        concept, scaleX provides you with the ultimate platform. Pitch your ideas in front of industry
+                        experts, gain immense exposure, and get the recognition you deserve to turn your vision into
+                        reality.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="p-6 glass-effect rounded-2xl">
+                            <i data-lucide="award" class="w-8 h-8 text-brand-500 mb-4"></i>
+                            <h3 class="text-xl font-bold mb-2">Recognition</h3>
+                            <p class="text-gray-400 text-sm">Stand out among peers and be acknowledged by top industry
+                                leaders.</p>
+                        </div>
+                        <div class="p-6 glass-effect rounded-2xl">
+                            <i data-lucide="trending-up" class="w-8 h-8 text-blue-500 mb-4"></i>
+                            <h3 class="text-xl font-bold mb-2">Exposure</h3>
+                            <p class="text-gray-400 text-sm">Get your ideas in front of potential mentors,
+                                collaborators, and peers.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <!-- Decorative element replacing an image for a cleaner tech look -->
+                    <div
+                        class="aspect-square rounded-3xl bg-gradient-to-tr from-gray-800 to-gray-900 border border-gray-700 p-8 flex flex-col justify-center items-center text-center relative overflow-hidden shadow-2xl">
+                        <div
+                            class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoMjU1LCAyNTUsIDI1NSwgMC4wNSkiLz48L3N2Zz4=')] opacity-50">
+                        </div>
+                        <img src="https://lh3.googleusercontent.com/d/1Tqx_PCTHaRf2rb-tlrgacOTMTa_r_wmp"
+                            class="w-48 h-48 object-contain mb-8 relative z-10 drop-shadow-2xl" alt="NEXGEN Large"
+                            onerror="this.onerror=null; this.src='https://placehold.co/400x400/111827/ffffff?text=NEXGEN';">
+                        <h3 class="text-2xl font-bold text-white relative z-10">Igniting Innovation</h3>
+                        <p class="text-brand-400 font-medium mt-2 relative z-10">Organized by NEXGEN</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Speaker Section -->
+    <section id="speaker" class="py-24 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4">Meet Our <span class="gradient-text">Guest of
+                        Honor</span></h2>
+                <div class="w-24 h-1 bg-brand-500 mx-auto rounded-full"></div>
+            </div>
+
+            <div
+                class="max-w-4xl mx-auto glass-effect rounded-3xl p-8 md:p-12 border border-gray-800 shadow-2xl relative">
+                <!-- Quote Icon Decorative -->
+                <i data-lucide="quote" class="absolute top-8 right-8 w-16 h-16 text-gray-800 opacity-50"></i>
+
+                <div class="flex flex-col md:flex-row gap-10 items-center">
+                    <div class="w-48 h-48 md:w-64 md:h-64 flex-shrink-0 relative">
+                        <div class="absolute inset-0 bg-brand-500 rounded-full blur-lg opacity-20"></div>
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=400&h=400"
+                            alt="Mr. Ravikanth"
+                            class="w-full h-full object-cover rounded-full border-4 border-gray-800 relative z-10 shadow-xl">
+                    </div>
+
+                    <div>
+                        <h3 class="text-3xl md:text-4xl font-bold text-white mb-2">Mr. Ravikanth</h3>
+                        <p class="text-brand-400 font-medium text-lg mb-6 flex items-center gap-2">
+                            <i data-lucide="star" class="w-5 h-5"></i> Chief Guest & Expert Evaluator
+                        </p>
+                        <p class="text-gray-300 leading-relaxed text-lg mb-6">
+                            We are profoundly honored to host Mr. Ravikanth at scaleX. With decades of exemplary
+                            experience in scaling businesses and nurturing startup ecosystems, his insights are
+                            unparalleled. He will be sharing his journey, evaluating the pitches, and providing direct
+                            feedback to our participating innovators.
+                        </p>
+                        <div class="flex gap-4">
+                            <span
+                                class="px-4 py-1.5 rounded-full bg-gray-800 text-gray-300 text-sm font-medium border border-gray-700">Entrepreneurship</span>
+                            <span
+                                class="px-4 py-1.5 rounded-full bg-gray-800 text-gray-300 text-sm font-medium border border-gray-700">Venture
+                                Capital</span>
+                            <span
+                                class="px-4 py-1.5 rounded-full bg-gray-800 text-gray-300 text-sm font-medium border border-gray-700">Innovation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rules and Regulations Section -->
+    <section id="rules" class="py-24 bg-gray-900 border-t border-gray-800 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4">Rules & <span class="text-brand-500">Regulations</span>
+                </h2>
+                <div class="w-24 h-1 bg-brand-500 mx-auto rounded-full"></div>
+                <p class="text-gray-400 mt-6 max-w-2xl mx-auto text-lg">Please read the following guidelines carefully
+                    before registering your pitch for the scaleX event.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Rule 1 -->
+                <div
+                    class="glass-effect p-8 rounded-3xl border border-gray-800 hover:border-brand-500/50 transition-colors group">
+                    <div
+                        class="w-14 h-14 bg-gray-800 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brand-500/20 transition-colors">
+                        <i data-lucide="users" class="w-7 h-7 text-brand-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Team Size</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Participants can pitch individually or in a team of up to 4 members. Only one registration is
+                        required per team.
+                    </p>
+                </div>
+
+                <!-- Rule 2 -->
+                <div
+                    class="glass-effect p-8 rounded-3xl border border-gray-800 hover:border-brand-500/50 transition-colors group">
+                    <div
+                        class="w-14 h-14 bg-gray-800 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brand-500/20 transition-colors">
+                        <i data-lucide="timer" class="w-7 h-7 text-brand-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Time Limit</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Each team will be given exactly 5 minutes for their pitch, followed by a strict 3-minute Q&A
+                        session with the judges.
+                    </p>
+                </div>
+
+                <!-- Rule 3 -->
+                <div
+                    class="glass-effect p-8 rounded-3xl border border-gray-800 hover:border-brand-500/50 transition-colors group">
+                    <div
+                        class="w-14 h-14 bg-gray-800 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brand-500/20 transition-colors">
+                        <i data-lucide="lightbulb" class="w-7 h-7 text-brand-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Originality</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        All ideas must be 100% original. Plagiarized ideas or previously funded startups will be
+                        immediately disqualified.
+                    </p>
+                </div>
+
+                <!-- Rule 4 -->
+                <div
+                    class="glass-effect p-8 rounded-3xl border border-gray-800 hover:border-brand-500/50 transition-colors group">
+                    <div
+                        class="w-14 h-14 bg-gray-800 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brand-500/20 transition-colors">
+                        <i data-lucide="shield-check" class="w-7 h-7 text-brand-400"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Presentation</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Presentations (PPT/PDF) must be submitted at least 24 hours prior to the event. A standard
+                        format is highly recommended.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-20 bg-brand-900/30 border-t border-brand-900/50 relative">
+        <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Showcase Your Idea?</h2>
+            <p class="text-gray-300 text-lg mb-10">Don't miss this opportunity to pitch in front of Mr. Ravikanth and
+                get the exposure your idea needs. Seats and pitching slots are limited.</p>
+            <!-- Modal Trigger Button -->
+            <button
+                class="open-rules-modal inline-block bg-brand-500 hover:bg-brand-400 text-gray-900 px-10 py-4 rounded-full font-bold text-lg transition-all shadow-[0_0_20px_rgba(20,184,166,0.4)] transform hover:scale-105">
+                Register for scaleX
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-950 py-12 border-t border-gray-900 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-4">
+                <img src="https://lh3.googleusercontent.com/d/1sTXB1JQaDOewoXc_rMsl2hiCcTLiQ-ON"
+                    class="h-10 w-10 object-cover bg-white rounded p-0.5 text-[8px] text-center" alt="KSIT"
+                    onerror="this.onerror=null; this.src='https://placehold.co/100x100/ffffff/111827?text=KSIT';">
+                <img src="https://lh3.googleusercontent.com/d/1Tqx_PCTHaRf2rb-tlrgacOTMTa_r_wmp"
+                    class="h-10 w-10 object-contain text-[8px] text-center text-gray-500" alt="NEXGEN"
+                    onerror="this.onerror=null; this.src='https://placehold.co/100x100/111827/ffffff?text=NEXGEN';">
+            </div>
+            <div class="text-gray-500 text-sm text-center md:text-right">
+                <p>&copy; 2026 ICC Club NEXGEN. All rights reserved.</p>
+                <p class="mt-1">K.S. Institute of Technology, Bangalore.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Rules Modal Popup -->
+    <div id="rulesModal" class="fixed inset-0 z-[100] hidden">
+        <!-- Backdrop -->
+        <div class="absolute inset-0 bg-black/80 backdrop-blur-sm transition-opacity" id="modalBackdrop"></div>
+
+        <!-- Modal Content -->
+        <div class="absolute inset-0 flex items-center justify-center p-4">
+            <div
+                class="bg-gray-900 border border-gray-800 rounded-3xl w-full max-w-2xl shadow-2xl relative flex flex-col max-h-[90vh]">
+                <!-- Close Button -->
+                <button id="closeModal"
+                    class="absolute top-4 right-4 text-gray-400 hover:text-white bg-gray-800 hover:bg-gray-700 rounded-full p-2 transition-colors z-10">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+
+                <div class="p-8 overflow-y-auto">
+                    <div class="text-center mb-8">
+                        <h3 class="text-3xl font-bold text-white mb-2">Before you register...</h3>
+                        <p class="text-brand-400 text-sm font-medium uppercase tracking-widest">Please review the rules
+                        </p>
+                    </div>
+
+                    <!-- Compact Rules List for Modal -->
+                    <div class="space-y-4 mb-8 bg-gray-950 p-6 rounded-2xl border border-gray-800">
+                        <div class="flex gap-4 items-start">
+                            <i data-lucide="users" class="w-6 h-6 text-brand-500 flex-shrink-0 mt-0.5"></i>
+                            <div>
+                                <h4 class="text-white font-bold">Team Size</h4>
+                                <p class="text-gray-400 text-sm">Individual or team of up to 4 members.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 items-start">
+                            <i data-lucide="timer" class="w-6 h-6 text-brand-500 flex-shrink-0 mt-0.5"></i>
+                            <div>
+                                <h4 class="text-white font-bold">Time Limit</h4>
+                                <p class="text-gray-400 text-sm">5 minutes for pitch + 3 minutes for Q&A.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 items-start">
+                            <i data-lucide="lightbulb" class="w-6 h-6 text-brand-500 flex-shrink-0 mt-0.5"></i>
+                            <div>
+                                <h4 class="text-white font-bold">Originality</h4>
+                                <p class="text-gray-400 text-sm">100% original ideas only. No plagiarism.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 items-start">
+                            <i data-lucide="shield-check" class="w-6 h-6 text-brand-500 flex-shrink-0 mt-0.5"></i>
+                            <div>
+                                <h4 class="text-white font-bold">Presentation</h4>
+                                <p class="text-gray-400 text-sm">PPT/PDF must be submitted 24 hours prior.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Final Registration Button -> Replace # with actual Google Form Link -->
+                    <a href="#" target="_blank" onclick="closeModalLogic()"
+                        class="w-full flex items-center justify-center gap-2 bg-brand-600 hover:bg-brand-500 text-white font-bold py-4 px-6 rounded-xl transition-colors shadow-lg shadow-brand-500/20">
+                        I Agree, Proceed to Google Form <i data-lucide="external-link" class="w-5 h-5"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        // Navbar blur on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 20) {
+                nav.classList.add('shadow-lg');
+                nav.style.background = 'rgba(17, 24, 39, 0.9)'; // gray-900 with opacity
+            } else {
+                nav.classList.remove('shadow-lg');
+                nav.style.background = 'rgba(255, 255, 255, 0.05)';
+            }
+        });
+
+        // Modal Logic
+        const modal = document.getElementById('rulesModal');
+        const openBtns = document.querySelectorAll('.open-rules-modal');
+        const closeBtn = document.getElementById('closeModal');
+        const backdrop = document.getElementById('modalBackdrop');
+
+        function openModal() {
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        }
+
+        function closeModalLogic() {
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto'; // Restore scrolling
+        }
+
+        // Event Listeners for opening/closing
+        openBtns.forEach(btn => btn.addEventListener('click', openModal));
+        closeBtn.addEventListener('click', closeModalLogic);
+        backdrop.addEventListener('click', closeModalLogic);
+    </script>
+</body>
+
+</html>
